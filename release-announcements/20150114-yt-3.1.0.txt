@@ -1,0 +1,167 @@
+The yt community is proud to announce the release of yt 3.1.
+
+yt (http://yt-project.org) is an open source, community-developed
+toolkit for analysis and visualization of volumetric data of all
+types, with a particular emphasis on astrophysical simulations and
+nuclear engineering simulations.
+
+This is a scheduled feature release. Highlighted changes in yt 3.1:
+
+Major changes:
+++++++++++++++
+
+* The RADMC-3D export analysis module has been updated.
+* Performance improvements for grid frontends.
+* Added a frontend for Dark Matter-only NMSU Art simulations.
+* The absorption spectrum generator has been updated.
+* The PerspectiveCamera has been updated and a new SphericalCamera has been added.
+* The unit system now supports unit equivalencies and has improved support for MKS units.
+* Data object selection can now be chained, allowing selecting based on multiple constraints.
+* Added the ability to manually override the simulation unit system.
+* The documentation has been reorganized and has seen substantial improvements.
+
+Minor or bugfix changes:
+++++++++++++++++++++++++
+
+* The Gadget InternalEnergy and StarFormationRate fields are now read in with the correct units.
+* Substantial improvements for the PPVCube analysis module and support for FITS datasets.
+* The center of a PlotWindow plot can now be set to the maximum or minimum of any field.
+* Projections are now performed using an explicit path length field for all coordinate systems.
+* Fix for the camera.draw_line function.
+* Minor fixes and improvements for yt plots.
+* Significant documentation reorganization and improvement.
+* Miscellaneous code cleanup.
+* yt now hooks up to the python logging infrastructure in a more standard fashion, avoiding issues
+  with yt logging showing up with using other libraries.
+* Improvements for the yt-rockstar interface.
+* It is now possible to supply a default value for get_field_parameter.
+* A bug in the interpretation of the units of RAMSES simulations has been fixed.
+* Improvements and bugfixes for the halo analysis framework.
+* Fix issues with the default setting for the "center" field parameter.
+* yt can now be run in parallel on a subset of available processors using an MPI subcommunicator.
+* Fix for incorrect units when loading an Athena simulation as a time series.
+* Improved support for Enzo 3.0 simulations that have not produced any active particles.
+* Fix for periodic radius vector calculation.
+* Improvements for the Maestro and Castro frontends.
+* Clump finding is now supported for more generic types of data.
+* Fix unit consistency issue when mixing dimensionless unit symbols.
+* Improved memory footprint in the photon_simulator.
+* Large grids in Athena datasets produced by the join_vtk script can now be optionally split,
+  improving parallel performance.
+* Slice plots now accept a “data_source" keyword argument.
+* Nearest neighbor distance field added.
+* Improvements for the ORION2 frontend.
+* Enzo 3.0 frontend can now read active particle attributes that are arrays of any shape.
+* Fixes for accessing deposit fields for FLASH data.
+* Added wrapper functions for numpy array manipulation functions.
+* Added support for packed HDF5 Enzo datasets.
+
+A more comprehensive list of the changes in this release, with links to the corresponding pull requests,
+can be found at http://yt-project.org/docs/3.1/reference/changelog.html.
+
+Standard Installation Methods
+-----------------------------
+
+As with previous releases, you can install yt from source using one of
+the following methods.
+
+1) From the install script (http://yt-project.org/#getyt):
+
+# Installation
+
+$ wget http://hg.yt-project.org/yt/raw/stable/doc/install_script.sh
+$ bash install_script.sh
+
+# Update
+
+$ yt update
+
+2) From pip (source or binary wheel, see below for more details):
+
+# Installation
+
+$ pip install yt
+
+# Update
+
+$ pip install -U yt
+
+3) From the Anaconda Python Distribution (https://store.continuum.io/cshop/anaconda/):
+
+# Installation
+
+$ conda install yt
+
+# Update
+
+$ conda update yt
+
+Note that it might take a day or two for the conda package to be updated.
+
+If you are on the “stable” branch, updating will bring you from yt 3.0.2 to 3.1, incorporating all
+changes since 3.0.2, whereas if you are on the “dev” or “yt” branch, only the changes since
+your last update should be incorporated.
+
+NEW: Installing Binary Packages via pip
+---------------------------------------
+
+New to this release is the ability to install binary packages (“wheels”) using
+pip on Windows and Mac OS X (64-bit only for both). This has the advantage
+of not needing to install yt from source using a proper compiler setup, which
+has caused occasional problems on both of these platforms and prevented us
+from installing yt easily on other Python distributions.
+
+We have so far been able to install and run the binary distribution via pip on the
+following platforms and Python stacks:
+
+Windows x86_64:
+
+* Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+* WinPython (http://winpython.sourceforge.net/)
+
+Mac OS X x86_64:
+
+* Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+* Homebrew Python (http://brew.sh/)
+* Python.org Python
+* Mac OS X’s system Python
+* MacPorts Python (https://www.macports.org/)
+
+This is somewhat experimental, so other distributions may work (or not),
+please submit bug reports or successes to the mailing list or to the Bitbucket
+issues page (http://bitbucket.org/yt_analysis/yt/issues).
+
+All distributions must be Python v. 2.7. The requirements for installing yt
+via this method are the same as from source:
+
+* NumPy
+* h5py
+* HDF5
+* SymPy
+* Matplotlib
+* IPython (not required, but strongly recommended)
+
+To install a new version of yt on one of these platforms, simply do
+
+$ pip install yt
+
+and you should get the binary distribution automatically. Also, if your
+python installation is system-wide (e.g., the Mac system Python)
+you might need to run pip with administrator privileges.
+
+For more information, including more installation instructions, links to
+community resources, and information on contributing to yt’s
+development, please see the yt homepage at http://yt-project.org and
+the documentation for yt-3.1 at http://yt-project.org/docs/3.1.
+
+yt is the product of a large community of developers and users and we
+are extraordinarily grateful for and proud of their contributions. Please
+forward this announcement on to any interested parties.
+
+As always, if you have any questions, concerns, or run into any trouble
+updating please don't hesitate to send a message to the mailing list or
+stop by our IRC channel.
+
+Thank you,
+
+The yt development team

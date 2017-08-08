@@ -1,0 +1,66 @@
+We're proud to announce the release of yt version 1.7, an analysis and
+visualization toolkit for Adaptive Mesh Refinement data.  (Just in
+time for the Enzo Workshop!)  This release fixes a number of bugs, as
+well as numerous improvements to the code base and the documentation.
+
+Most prominently, it features "two-point functions" such as structure
+and correlation functions, a re-engineered volume rendering interface,
+multivariate volume rendering, off-axis projections, and a mechanism
+for complex postscript plot layout.  Additionally, a major aspect of
+the drive to 1.7 has been re-engineering the API documentation to be
+better suited to interactive help (the "help(...)" call in python) as
+well as the documentation website ( http://yt.enzotools.org/doc/ ).
+
+Some of the changes since yt-1.6 (Released on January 22, 2010) include:
+
+ * Direct writing of PNGs
+ * Multi-band image writing
+ * Parallel halo merger tree
+ * Parallel structure function generator
+ * Image pan and zoom object and display widget
+ * Parallel volume rendering
+ * Multivariate volume rendering, allowing for multiple forms of
+emission and absorption
+ * Added Camera interface to volume rendering
+ * Off-axis projection
+ * Stereo (toe-in) volume rendering
+ * DualEPS extension for better EPS construction
+ * Rewritten, memory conservative and speed-improved contour finding
+algorithm
+ * Speed improvements to volume rendering
+ * Preliminary support for the Tiger code
+ * Lightweight projection loading with projload
+ * Improvements to yt.data_objects.time_series
+ * Improvements to yt.extensions.EnzoSimulation
+ * Speed improvements to basic HOP
+ * Better docstrings and documentation
+
+(The full changelog: http://yt.enzotools.org/doc/changelog.html )
+
+yt features native support for Enzo
+(http://lca.ucsd.edu/projects/enzo) data, providing a natural and
+intuitive way to address physical regions in space as well as
+processed data.
+
+Installation instructions can be found here:
+http://yt.enzotools.org/doc/installation.html .  If you are running an
+older version of yt, re-obtaining and re-running the installation
+script should happily upgrade your installation.  yt is a Free and
+Open Source project, and we invite you to get involved. For more
+information, join the yt-dev mailing list, or see the hacking
+guidelines on the Wiki: http://yt.enzotools.org/wiki/HackingGuidelines
+.  We anticipate a few more releases in the 1.7 series as
+documentation and docstring coverage progress.
+
+Sincerely,
+
+The yt development team:
+
+Matthew Turk
+Stephen Skory
+Britton Smith
+John Wise
+Jeff Oishi
+Sam Skillman
+Devin Silvia
+David Collins

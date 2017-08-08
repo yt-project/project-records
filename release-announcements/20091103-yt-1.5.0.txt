@@ -1,0 +1,56 @@
+We're proud to announce the release of yt version 1.5, an analysis and
+visualization toolkit for Adaptive Mesh Refinement data.  yt features
+native support for Enzo (http://lca.ucsd.edu/projects/enzo/) data,
+providing a natural and intuitive way to address physical regions in
+space as well as processed data.  Version 1.5 features many new
+improvements, most prominently that of the addition of parallel
+computing abilities and generalization for multiple AMR data formats.
+Additional improvements include:
+
+    * Fully rewritten documentation, featuring a new cookbook with
+downloadable recipes and commenting facilities
+    * Extensive methods section of documentation
+    * Fully parallel slices, projections, cutting planes, profiles, quantities
+    * Parallel HOP halo finder
+    * Friends-of-friends halo finder
+    * Object storage and serialization
+    * Major performance improvements to the clump finder (factor of five)
+    * Generalized domain sizes
+    * Generalized field info containers
+    * Dark Matter-only simulation support
+    * 1D and 2D simulation support
+    * Better IO for HDF5 sets
+    * Support for the Orion AMR code
+    * Spherical re-gridding of data
+    * Automated halo profiler and imager
+    * Limited non-axially aligned projection support ("disk stacking")
+    * Light cone generator
+    * Callback interface improved
+    * Several new plot overlay callbacks
+    * New data objects -- ortho and non-ortho rays, limited ray-tracing
+    * Fixed resolution buffers
+    * Spectral integrator for CLOUDY data
+    * Substantially better interactive interface
+    * Performance improvements *everywhere*
+    * Command-line interface to *many* common tasks
+    * Isolated plot handling, independent of PlotCollections
+
+Installation instructions, documentation, recipes, mailing list info
+and assorted other items can be found at the website,
+http://yt.enzotools.org/ .
+
+This release is the product of a year of work by the development team,
+and we are very proud of the results and happy with what we have to
+offer.  Thanks very much!
+
+Sincerely,
+
+The yt development team:
+  Matthew Turk
+  Britton Smith
+  Jeff Oishi
+  Stephen Skory
+  Sam Skillman
+  Devin Silvia
+  John Wise
+  David Collins

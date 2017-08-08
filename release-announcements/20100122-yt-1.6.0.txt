@@ -1,0 +1,55 @@
+We're proud to announce the release of yt version 1.6, a point release
+of the analysis and visualization toolkit for Adaptive Mesh Refinement
+data. This release contains many small improvements to the codebase,
+as well as several large improvements. Most prominently, it features a
+completely redesigned, massively parallel implementation of the halo
+finding algorithm HOP, as well as attendant improvements to particle
+data IO and parallel communication. Additionally, the underlying data
+structures for hierarchical datasets have been rewritten for speed and
+clarity, enabling the future addition of new multi-resolution data
+formats to be easily added.
+
+yt features native support for Enzo
+(http://lca.ucsd.edu/projects/enzo) data, providing a natural and
+intuitive way to address physical regions in space as well as
+processed data.
+
+Some of the changes since yt-1.5 (released on November 3, 2009) include:
+
+ * (New) Parallel HOP ( http://arxiv.org/abs/1001.3411 )
+ * (Beta!) Software ray casting and volume rendering (Sam Skillman has
+a gallery here:
+http://casa.colorado.edu/~skillman/simulation_gallery/simulation_gallery.html
+)
+ * Rewritten, faster and better contouring engine for clump identification
+ * Spectral Energy Distribution calculation for stellar populations
+ * Optimized data structures such as the hierarchy
+ * Star particle analysis routines
+ * Halo mass function routines
+ * Completely rewritten, massively faster and more memory efficient Particle IO
+ * Fixes for plots, including normalized phase plots
+ * Better collective communication in parallel routines
+ * Consolidation of optimized C routines into amr_utils
+ * Many bug fixes and minor optimizations
+ * Installation instructions, documentation, recipes, mailing list
+info and assorted other items can be found at the website,
+http://yt.enzotools.org/ along with an annotated changelog at
+http://yt.enzotools.org/doc/changelog.html .
+
+yt is a Free and Open Source project, and we invite you to get
+involved. For more information, join the yt-dev mailing list, or see
+the hacking guidelines on the Wiki:
+http://yt.enzotools.org/wiki/HackingGuidelines .
+
+Sincerely,
+
+The yt development team:
+
+Matthew Turk
+Stephen Skory
+Britton Smith
+Jeff Oishi
+Sam Skillman
+Devin Silvia
+John Wise
+David Collins

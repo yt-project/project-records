@@ -1,0 +1,8 @@
+Hi all,
+
+Because of a regression in phase plots in yt 2.6, we've just rolled
+out a point release of yt 2.6.1.  If you have been using phase plots,
+or want to use them in the future, we recommend upgrading.  If you're
+using the "stable" branch already from source, just run "yt update".
+
+-Matt

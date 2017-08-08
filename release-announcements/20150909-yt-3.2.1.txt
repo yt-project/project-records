@@ -1,0 +1,185 @@
+We are proud to announce the release of yt 3.2.1!
+
+yt (http://yt-project.org) is an open-source, community-developed toolkit for
+analysis and visualization of volumetric data of all types, with a particular
+emphasis on astrophysical and nuclear engineering simulations.
+
+Version 3.2.1 is a regularly scheduled bugfix release including fixes for a
+number of issues reported since the release of yt 3.2. These changes are
+summarized below and include a number of bugfixes, performance improvements, and
+documentation improvements. We urge all users of version 3.2 to upgrade to yt
+3.2.1 immediately.
+
+Summary of changes
+------------------
+
+* Fixed an issue with reading ORION2 star particle data
+* The "particle_velocity_cylindrical_radius" field now uses the correct field
+  definition.
+* Prevent unit test failure from occuring if scipy or astropy is not installed
+* Present better error messages when trying to load empty files or directories
+* Add support for the fabs ufunc to YTArray
+* Remove enzo installation option from the install script
+* Fixed issue with the EPS writer when it is supplied a ProfilePlot
+* Fixed reading of the NMSU-ART star particle creation time field
+* Use a stronger hashing algorithm for calculating selection hashes to fix
+  issues with data object selection in Python 3
+* Fix an error in the docstrings of Cosmology.t_from_z()
+* Fix python3 answer test failure for Enzo species field names
+* Fix incorrect use of "normal" instead of "center" in spherical coordinate
+  fields.
+* Avoid NameError when comparing temperature units with offsets
+* Avoid creating YTQuantity instances with more than one value
+* Include requirements files and cuda sources in source distribution. Avoid
+  including a full docs build.
+* Add search bar to main docs page
+* Add canonical link for documentation to improve google search results for yt
+  documentation
+* Use nice latex representation for unit labels returned by
+  DerivedField.get_label()
+* Add assert_allclose_units to avoid test failures in Numpy 1.10 and newer
+* Avoid unsafe casting error in Numpy 1.10 or newer
+* Fix incorrect plots created by scripts that call PlotContainer._setup_plots()
+  directly.
+* Allow the creation of gradient fields based on fields with dimensionless units
+* Correct two incorrect paths in the documentation on loading data
+* The MaxLocation and MinLocation derived quantities now work correctly with
+  non-cartesian data and particle fields.
+* Use OrderedDict in PlotWindow answer tests to avoid unstable test names in
+  Python 3
+* Speed improvements for the absorption_spectrum analysis module
+* Speed improvements for smoothed covering grids
+* Fixed a small CSS issue in the main docs page
+* Fix incorrect velocity and time units for Gadget cosmological datasets
+* Use truediv operator in unit object tests for Python 3 compatibility
+* Fix several bugs in the photon simulator analysis module.
+* Ensure camera width and center are in code units before rendering, avoiding a
+  possible segmentation fault.
+* Ensure fields passed to process_octree during smoothing are contiguous. Fixes
+  a regression in the values of smoothed SPH fields.
+
+Coming Soon!
+------------
+
+The next major release of yt will be version 3.3, which is slated to include an
+overhaul of the volume rendering system and support for analyzing and
+visualizing unstructured mesh data.
+
+Standard Installation Methods
+-----------------------------
+
+As with previous releases, you can install yt from source using one of the
+following methods.
+
+1) From the install script (http://yt-project.org/#getyt ):
+
+If you previously installed yt from the install script, you can update your
+installation in-place using the following command:
+
+# Update
+
+$ yt update
+
+If you are on the “stable” branch, updating will bring you from yt 3.2 to 3.2.1,
+incorporating all changes since 3.2, whereas if you are on the development “yt”
+branch, only the changes since your last update should be incorporated.
+
+To install from scratch, do the following:
+
+# Installation
+
+$ wget http://bitbucket.org/yt_analysis/yt/raw/stable/doc/install_script.sh
+$ bash install_script.sh
+
+2) From pip (source or binary wheel, see below for more details):
+
+# Installation
+
+$ pip install yt
+
+# Update
+
+$ pip install -U yt
+
+3) From the Anaconda Python Distribution
+(https://store.continuum.io/cshop/anaconda/):
+
+# Installation
+
+$ conda install yt
+
+# Update
+
+$ conda update yt
+
+Note that it might take up to a week for the conda package built by Continuum
+Analytics to be updated for yt 3.2.1.
+
+Installing Binary Packages via pip
+
+If you do not have compilers available, it is also possible to install binary
+packages (“wheels”) using pip on Windows and Mac OS X (64-bit only for
+both). This has the advantage of not needing to install yt from source using a
+proper compiler setup, which has caused occasional problems on both of these
+platforms and prevented us from installing yt easily on other Python
+distributions.
+
+Note that it may take several days for binary wheels for yt 3.2.1 to be uploaded.
+
+We have so far been able to install and run the binary distribution via pip on
+the following platforms and Python stacks:
+
+Note that it might take a day or two for the pip wheels to be updated.
+
+Windows x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+WinPython (http://winpython.sourceforge.net/)
+
+Mac OS X x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+Homebrew Python (http://brew.sh/)
+Python.org Python
+Mac OS X’s system Python
+MacPorts Python (https://www.macports.org/)
+
+This is somewhat experimental, so other distributions may work (or not), please
+submit bug reports or successes to the mailing list or to the Bitbucket issues
+page (http://bitbucket.org/yt_analysis/yt/issues).
+
+Both Python 2.7 and Python 3.4 are supported. The dependencies for installing
+yt via this method are the same as from source:
+
+NumPy
+h5py
+HDF5
+SymPy
+Matplotlib
+IPython (not required, but strongly recommended)
+
+To install a new version of yt on one of these platforms, simply do
+
+$ pip install yt
+
+and you should get the binary distribution automatically. Also, if your python
+installation is system-wide (e.g., the Mac system Python) you might need to run
+pip with administrator privileges.
+
+For more information, including more installation instructions, links to
+community resources, and information on contributing to yt’s development, please
+see the yt homepage at http://yt-project.org and the documentation for yt-3.2 at
+http://yt-project.org/docs/3.2.
+
+yt is the product of a large community of developers and users and we are
+extraordinarily grateful for and proud of their contributions. Please forward
+this announcement on to any interested parties.
+
+As always, if you have any questions, concerns, or run into any trouble updating
+please don't hesitate to send a message to the mailing list or stop by our IRC
+channel.
+
+All the best,
+
+Nathan Goldbaum, 
+on behalf of the yt development team

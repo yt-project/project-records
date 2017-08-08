@@ -1,0 +1,43 @@
+We are proud to announce the release of yt 3.3.5!
+
+yt (http://yt-project.org) is an open-source, community-developed toolkit for analysis and visualization of volumetric data.
+
+Version 3.3.5 is a regularly scheduled bugfix release including fixes for a number of issues reported since the release of yt 3.3.4.  We urge all users to update to the latest version.
+
+If your python installation is managed via conda, update following:
+
+$ conda update -c conda-forge yt
+
+If your python installation is managed via pip, update following:
+
+$ pip install -U yt
+
+Finally, if you manage your yt installation by running out of a clone of the yt mercurial repository, update following:
+
+$ yt update
+
+We would like to thank the following people for their contributions to this release:
+
+Nathan Goldbaum
+
+Kacper Kowalik
+
+Andrew Myers
+
+John ZuHone
+
+A summary of changes in this release, along with a link to the pull request implementing the changes follow below:
+
+Fix for off-axis projections of multiple fields producing data only for the first field (PR 2502)
+
+Don't attempt to parse inputs or probins files for generic BoxLib data (PR 2517)
+
+Fix C compilation warnings (PR 2519)
+
+Fix an error in the halos plot callback that was unintentionally introduced on the stable branch while backporting another bugfix for yt 3.3.4 (PR 2520)
+
+Ensure transparent volume renderings can be composited (PR 2521)
+
+Allow user customization of the mean molecular weight via a field parameter in the Gadget temperature field (PR 2523)
+
+Fix syntax error in code example in the documentation (PR 2524)

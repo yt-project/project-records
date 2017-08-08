@@ -1,0 +1,28 @@
+Hi all,
+
+We're proud to release yt version 2.5.2.  This is a scheduled point
+release that includes all bug fixes identified and fixed since the
+release of 2.5.1 on April 1.
+
+Changes and bug fixes include:
+
+  * Upgrades to most of the dependencies in the install script
+  * Speed improvements to ellipsoidal particle detection
+  * Updates to FLASH fields
+  * CASTRO frontend bug fixes
+  * Fisheye camera bug fixes
+  * ProjectionPlot now accepts a data_source keyword argument
+  * Answer testing now includes plot window answer testing
+  * Athena data serialization
+
+If you are using the stable branch of yt from an installation script,
+you can upgrade using "yt update" or "yt update --all" to upgrade your
+full dependency stack.  If you are using the development branch, you
+may already have these fixes.  A tarball of this release has been
+uploaded to the Python Package Index (PyPI), although due to user
+error (me) it includes the Cython sources instead of the C sources for
+the generated code.  Oops.
+
+Thanks very much,
+
+Matt, on behalf of the yt development team

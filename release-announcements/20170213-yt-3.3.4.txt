@@ -1,0 +1,55 @@
+We are proud to announce the release of yt 3.3.4!
+
+yt (http://yt-project.org) is an open-source, community-developed toolkit for
+analysis and visualization of volumetric data of all types, with a particular
+emphasis on astrophysical and nuclear engineering simulations.  yt 3.3.4 is
+officially the "Happy 10th Birthday to yt!" release.
+
+Version 3.3.4 is a regularly scheduled bugfix release including fixes for a
+number of issues reported since the release of yt 3.3.3.  We urge all users to
+update to the latest version.
+
+If your python installation is managed via conda, update following:
+
+$ conda update -c conda-forge yt
+
+If your python installation is managed via pip, update following:
+
+$ pip install -U yt
+
+Finally, if you manage your yt installation by running out of a clone of the yt
+mercurial repository, update following:
+
+$ yt update
+
+We would like to thank the following people for their contributions to this
+release:
+
+Corentin Cadiou
+
+Nathan Goldbaum
+
+Kacper Kowalik
+
+Matthew Krafczyk
+
+A summary of changes in this release, along with the number of the pull request
+implementing the change follows below:
+
+Compatibility with matplotlib 2.0 (PR 2467)
+
+Update the description of the yt package (PR 2472)
+
+Compatibility with NumPy 1.12 under python3 (PR 2478)
+
+Correctly detect some non-cosmological Ramses data as such (PR 2491)
+
+Fix issue with periodic mirroring of data in the halos callback (PR 2492)
+
+Ensure field data are contiguous before depositing (PR 2498 and PR 2518)
+
+Adjust internal setup of mutable dataset attributes (PR 2501)
+
+Fix issues creating box data objects (PR 2508)
+
+Register __hg_version__.py with setuptools extension builder (PR 2445)

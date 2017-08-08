@@ -1,0 +1,72 @@
+We are proud to announce the release of yt 3.3.3!
+
+Version 3.3.3 is a regularly scheduled bugfix release including fixes for a
+number of issues reported since the release of yt 3.3.2.  We urge all users to
+update to the latest version.
+
+If your python installation is managed via conda, update following:
+
+$ conda update -c conda-forge yt
+
+If your python installation is managed via pip, update following:
+
+$ pip install -U yt
+
+Finally, if you manage your yt installation by running out of a clone of the yt
+mercurial repository, update following:
+
+$ yt update
+
+We would like to thank the following people for their contributions to this
+release:
+
+Nathan Goldbaum
+Cameron Hummels
+Ben Keller
+Kacper Kowalik
+Jonah Miller
+Andrew Myers
+Hsi-Yu Schive
+Britton Smith
+Matthew Turk
+John Wise
+John ZuHone
+
+
+A summary of changes in this release, along with the number of the pull request
+implementing the change follows below:
+
+Additional docstrings for unstructured mesh data.  See PR 2403.
+
+Speedup in clump finding. See PR 2426.
+
+Speedup in tests. See PR 2427.
+
+Bugfixes and docs for Tipsy data. PR 2430, PR 2431.
+
+Bugfix in Ramses time calculation. PR 2433.
+
+Bugfix in octree indexing. PR 2434.
+
+Fixing behavior of ProfilePlots and Profiles PR 2437, PR 2448.
+
+Bugfix for EPSWritter handing dicts in PlotsWindow instances. PR 2440.
+
+Ensuring ion fields utilize dataset's metal-specific fields PR 2442.
+
+Assure no orphaned mercurial processes PR 2449.
+
+Adding checks for bad values in AbsorptionSpectrum PR 2450.
+
+Bugfix in geographic handler PR 2452.
+
+Bringing gadget data more inline with other SPH datasets PR 2456, PR 2436.
+
+Bugfix when OpenMP unavailable PR 2458.
+
+Enable light_ray_solution saved to actual LightRay class PR 2460.
+
+Assure path uses dataset's own unit system. PR 2462.
+
+Cameron Hummels,
+On behalf of the yt development team

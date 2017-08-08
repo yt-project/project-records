@@ -1,0 +1,224 @@
+We are proud to announce the release of yt 3.2.2!
+
+yt (http://yt-project.org) is an open-source, community-developed toolkit for 
+analysis and visualization of volumetric data of all types, with a particular
+emphasis on astrophysical and nuclear engineering simulations.
+
+Version 3.2.2 is a regularly scheduled bugfix release including fixes for a
+number of issues reported since the release of yt 3.2.1. This release also
+supports matplotlib 1.5.x and NumPy 1.10.x. 
+
+The changes in this version are summarized below and include a number of 
+bugfixes, performance improvements, and documentation improvements. 
+We urge all users of version 3.2 and 3.2.1 to upgrade to yt 3.2.2 immediately.
+
+Summary of changes
+----------------------------
+
+* Several fixes for units in the Tipsy frontend, including fixes for incorrect units 
+  when data were loaded without a parameter file available, support for Tipsy 
+  datasets converted from Gadget outputs, and support for tipsy auxiliary files 
+  containing data for more particles than the default chunking size. See 
+  PR 1668, PR 1735, and PR 1787.
+
+* Added better documentation for answer testing. See PR 1742 and PR 1807.
+
+* Fixed a typo in the particle filter documentation. See PR 1744.
+
+* Avoid a test failure when running the unit tests in yt's default configuration. 
+  See PR 1754.
+
+* Ensure grid patch objects have cell width metadata when needed. 
+  See PR 1756.
+
+* Ensure matplotlib axes and figure objects are always valid when modifying a yt 
+  plot. See PR 1757.
+
+* Fix a bug in the ARTIO frontend's implementation of 
+  "ds.index.get_smallest_dx()". See PR 1759.
+
+* Remove some dead code from the Chombo frontend. See PR 1761.
+
+* Adapt to API change in matplotlib 1.5.x. See PR 1752.
+
+* Use the effective redshift for calculating absorption spectra in the LightRay 
+  analysis module. See PR 1758 and PR 1783.
+
+* Add support for more types of NMSU ART datasets. See PR 1764.
+
+* Fix test failures under Numpy 1.10 or newer. See PR 1697, PR 1767 and 
+  PR 1779.
+
+* Avoid build failure in the check for openmp support. See PR 1768.
+
+* Ensure field dependencies are resulved when creating a smoothed particle field.
+  See PR 1772.
+
+* Fix a bug in the chombo frontend that prevented loading data with more than 
+  10 particle fields. See PR 1780.
+
+* Minor performance optimization for the photon simulation analysis module.
+  See PR 1766.
+
+* Fix loading Athena data under python3 when parameters are provided at load time.
+  See PR 1828.
+
+* Ensure Athena datasets have a `velocity_unit` attribute. See PR 1831.
+
+* Fix for loading GDF data in python3. See PR 1831.
+
+* Speedup for unit operations. See PR 1782.
+
+* Fix issues with SIMPUT files in the photon simulator analysis module. 
+  See PR 1790.
+
+* Ensure the x and y limits of PhasePlot instances are controllable via 
+  set_xlim and set_ylim. See PR 1821.
+
+* Fixing various issues in the Sunyaev-Zeldovich analysis module. See PR 1835.
+
+* Stop referring to a requirements file in the installation docs. See PR 1839.
+
+* Generate a nicer error message to work around bug in the nose testing framework.
+  See PR 1840.
+
+* Fix loading Gadget data in python3. See PR 1841.
+
+* Fix loading Tipsy data in python3. See PR 1842.
+
+* Pass bytes to FNV hashing algorithm, don't rely on python hashes. See PR 1845.
+
+* Fix bug in ray "dts" and "t" fields. See PR 1846.
+
+* Make array_like_field return data with the same units as get_data. See PR 1847.
+
+* Make default reult_id for parallel_objects more useful. See PR 1851.
+
+* Update author name and e-mail metadata in setup.py. See PR 1854.
+
+Coming Soon!
+-------------------
+
+The next major release of yt will be version 3.3, which is slated to include an
+overhaul of the volume rendering system and support for analyzing and
+visualizing unstructured mesh data. Some of this functionality is already available
+on the development branch of yt. We welcome feedback from early testers.
+
+Standard Installation Methods
+-----------------------------
+
+As with previous releases, you can install yt from source using one of the
+following methods.
+
+1) From the install script (http://yt-project.org/#getyt ):
+
+If you previously installed yt from the install script, you can update your
+installation in-place using the following command:
+
+# Update
+
+$ yt update
+
+If you are on the “stable” branch, updating will bring you from yt 3.2.1 or 3.2 
+to 3.2.2, whereas if you are on the development “yt” branch, only the 
+changes since your last update should be incorporated.
+
+To install from scratch, do the following:
+
+# Installation
+
+$ wget http://bitbucket.org/yt_analysis/yt/raw/stable/doc/install_script.sh
+$ bash install_script.sh
+
+2) From pip (source or binary wheel, see below for more details):
+
+# Installation
+
+$ pip install yt
+
+# Update
+
+$ pip install -U yt
+
+3) From the Anaconda Python Distribution
+(https://store.continuum.io/cshop/anaconda/):
+
+# Installation
+
+$ conda install yt
+
+# Update
+
+$ conda update yt
+
+Note that it might take up to a week for the conda package built by Continuum
+Analytics to be updated for yt 3.2.2.
+
+Installing Binary Packages via pip
+
+If you do not have compilers available, it is also possible to install binary
+packages (“wheels”) using pip on Windows and Mac OS X (64-bit only for
+both). This has the advantage of not needing to install yt from source using a
+proper compiler setup, which has caused occasional problems on both of these
+platforms and prevented us from installing yt easily on other Python
+distributions.
+
+Note that it may take several days for binary wheels for yt 3.2.2 to be uploaded.
+
+We have so far been able to install and run the binary distribution via pip on
+the following platforms and Python stacks:
+
+Note that it might take a day or two for the pip wheels to be updated.
+
+Windows x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+WinPython (http://winpython.sourceforge.net/)
+
+Mac OS X x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+Homebrew Python (http://brew.sh/)
+Python.org Python
+Mac OS X’s system Python
+MacPorts Python (https://www.macports.org/)
+
+This is somewhat experimental, so other distributions may work (or not), please
+submit bug reports or successes to the mailing list or to the Bitbucket issues
+page (http://bitbucket.org/yt_analysis/yt/issues).
+
+Both Python 2.7 and Python 3.4 are supported. The dependencies for installing
+yt via this method are the same as from source:
+
+NumPy
+h5py
+HDF5
+SymPy
+Matplotlib
+IPython (not required, but strongly recommended)
+
+To install a new version of yt on one of these platforms, simply do
+
+$ pip install yt
+
+and you should get the binary distribution automatically. Also, if your python
+installation is system-wide (e.g., the Mac system Python) you might need to run
+pip with administrator privileges.
+
+For more information, including more installation instructions, links to
+community resources, and information on contributing to yt’s development, please
+see the yt homepage at http://yt-project.org and the documentation for yt-3.2.2 at
+http://yt-project.org/doc.
+
+yt is the product of a large community of developers and users and we are
+extraordinarily grateful for and proud of their contributions. Please forward
+this announcement on to any interested parties.
+
+As always, if you have any questions, concerns, or run into any trouble updating
+please don't hesitate to send a message to the mailing list or stop by our IRC
+channel.
+
+All the best,
+
+Nathan Goldbaum, 
+on behalf of the yt development team

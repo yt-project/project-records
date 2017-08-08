@@ -1,0 +1,24 @@
+Hi Everyone!
+
+The yt community is proud to announce the release of yt Hub 1.0.
+
+The yt Hub (https://hub.yt) is an environment where data can be published, analyzed and shared with other people.  The yt Hub relies on multiple open source microservices that are loosely coupled together. At its core we utilize:
+
+ * Girder - as a data management platform (https://girder.hub.yt)
+ * Jupyter Notebook - for interactive data exploration
+ * Curldrop - for a quick and easy data sharing
+ * MediaGoblin - for a quick and easy image sharing
+
+We encourage you to view this short video: https://www.youtube.com/watch?v=Uq_3uT7JHGA to see how we integrated Girder with Jupyter Notebook or read https://docs.hub.yt/girder.html
+
+Each authenticated user (Google, Bitbucket, or GitHub) is provided with 10GB of free space that can be used for uploading data sets and sharing them with other people. We plan to gradually increase the storage capacity of the Hub.  Additionally, we're developing a process for sharing of large, community-provided data sets. If your data requirements exceed the current limit, please don't hesitate to contact us directly so that we can develop a plan to integrate your data in an efficient way.
+
+Over time we plan to expand the capabilities of the existing services and add new ones. A short set of documentation describing the current services and what you can do with them can be found at https://docs.hub.yt/
+
+As always, if you have any questions, concerns, or run into any trouble please don't hesitate to send a message to the mailing list or stop by our IRC channel.
+
+We thank the National Science Foundation (ACI-1535651) and the Gordon and Betty Moore Foundation (GBMF4561) for their support in developing and deploying this service.
+
+Thank you,
+
+Kacper Kowalik on behalf of the yt development team

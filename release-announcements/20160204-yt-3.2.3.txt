@@ -1,0 +1,167 @@
+We are proud to announce the release of yt 3.2.3!
+
+yt (http://yt-project.org) is an open-source, community-developed toolkit for 
+analysis and visualization of volumetric data of all types, with a particular
+emphasis on astrophysical and nuclear engineering simulations.
+
+Version 3.2.3 is a regularly scheduled bugfix release including fixes for a
+number of issues reported since the release of yt 3.2.2.
+
+The changes in this version are summarized below and include a number of 
+bugfixes, performance improvements, and documentation improvements. 
+We urge all users of prior versions to upgrade to yt 3.2.3 immediately.
+
+Summary of Changes
+-----------------------------
+
+Fix an issue with parallel decomposition in the stream frontend under Python3. See PR 1862 and PR 1927
+
+Fix an issue with initializing LightRay objects with both start_position and a redshift range. See PR 1863
+
+Work around an an issue the prevents compiling yt using Python 3.5.0 by disabling OpenMP support. This is fixed in Python 3.5.1. See PR 1871
+
+Fix an issue with parsing some parameters in NMSU ART datasets. See PR 1875
+
+Ensure ARTIO frontend creates a metal_density when outputs contain both Ia and II metal production. See PR 1876
+
+Convert profile extrema to output_units instead of units, to be consistent with behavior of array_like_field. See PR 1882
+
+Only set output_units after units has been set. See PR 1887
+
+Fix casting errors in the SDF frontend under NumPy 1.10 and newer. See PR 1890
+
+Improved Python3 compatibility. See PR 1899, PR 1920, PR 1934, and PR 1931
+
+PlotWindow helpers for showing and hiding colorbars and axis annotations now return the PlotWindow instance. This improves viewing in the notebook. See PR 1905
+
+Corrected error in docstring for load_uniform_grid. See PR 1910
+
+Fix sphinx syntax error in getting help guide. See PR 1928
+
+Improve docs rendering on Firefox for Linux and possible other browsers. See PR 1929
+
+Fix issues parsing GDF files under Python3. See PR 1930
+
+Produce better error message when load_uniform_grid is passed data with an incorrect shape. See PR 1933
+
+Fix issue with plotting cylindrical data. See PR 1940
+
+Fix issues with eps writer docs, rendering, and compatibility. See PR 1941 and PR 1963
+
+Produce a better error message with export_fits is not able to determine any output fields. See PR 1943
+
+Fixed parameter parsing for reduced dimensionality Boxlib datasets. See PR 1947
+
+Fix a number of issues with ds.find_field_values_at_point and ds.find_field_values_at_points. See PR 1950
+
+Adding a cache for selector object hashes. See PR 1965
+
+Import HUGE from yt.utilities.physical_ratiois. See PR 1971
+
+Compatible with upcoming NumPy 1.11 release. See PR 1969
+
+Coming Soon!
+-------------------
+
+The next major release of yt will be version 3.3, which is slated to include an overhaul of the volume rendering system, support for analyzing and visualizing unstructured mesh data, a new system for saving and restoring data objects, and a way to specify unit systems when loading data. Some of this functionality is already available on the development branch of yt. We welcome feedback from early testers.
+
+Standard Installation Methods
+----------------------------------------
+
+As with previous releases, you can install yt from source using one of the
+following methods.
+
+1) From the install script (http://yt-project.org/#getyt ):
+
+If you previously installed yt from the install script, you can update your
+installation in-place using the following command:
+
+# Update
+
+$ yt update
+
+If you are on the “stable” branch, updating will bring you from an earlier version 
+to 3.2.3, whereas if you are on the development “yt” branch, only the 
+changes since your last update should be incorporated.
+
+To install from scratch, do the following:
+
+# Installation
+
+$ wget http://bitbucket.org/yt_analysis/yt/raw/stable/doc/install_script.sh
+$ bash install_script.sh
+
+2) From pip (source or binary wheel, see below for more details):
+
+# Installation
+
+$ pip install yt
+
+# Update
+
+$ pip install -U yt
+
+3) From the Anaconda Python Distribution
+(https://store.continuum.io/cshop/anaconda/):
+
+# Installation
+
+$ conda install yt
+
+# Update
+
+$ conda update yt
+
+Note that it might take up to a week for the conda package built by Continuum
+Analytics to be updated for yt 3.2.3.
+
+Installing Binary Packages via pip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you do not have compilers available, it is also possible to install binary packages (“wheels”) using pip on Windows and Mac OS X (64-bit only for both). This has the advantage of not needing to install yt from source using a proper compiler setup, which has caused occasional problems on both of these platforms and prevented us from installing yt easily on other Python distributions.
+
+Note that it may take several days for binary wheels for yt 3.2.3 to be uploaded.
+
+We have so far been able to install and run the binary distribution via pip on the following platforms and Python stacks:
+
+Windows x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+WinPython (http://winpython.sourceforge.net/)
+
+Mac OS X x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+Homebrew Python (http://brew.sh/)
+Python.org Python
+Mac OS X’s system Python
+MacPorts Python (https://www.macports.org/)
+
+This is somewhat experimental, so other distributions may work (or not), please submit bug reports or successes to the mailing list or to the Bitbucket issues page (http://bitbucket.org/yt_analysis/yt/issues).
+
+Both Python 2.7 and Python 3.4 are supported. The dependencies for installing yt via this method are the same as from source:
+
+NumPy
+h5py
+HDF5
+SymPy
+Matplotlib
+IPython (not required, but strongly recommended)
+
+To install a new version of yt on one of these platforms, simply do
+
+$ pip install yt
+
+and you should get the binary distribution automatically. Also, if your python
+installation is system-wide (e.g., the Mac system Python) you might need to run pip with administrator privileges.
+
+For more information, including more installation instructions, links to community resources, and information on contributing to yt’s development, please see the yt homepage at http://yt-project.org and the documentation for yt 3.2.3 at http://yt-project.org/doc.
+
+yt is the product of a large community of developers and users and we are extraordinarily grateful for and proud of their contributions. Please forward this announcement on to any interested parties.
+
+As always, if you have any questions, concerns, or run into any trouble updating please don't hesitate to send a message to the mailing list or stop by our IRC channel.
+
+All the best,
+
+Nathan Goldbaum, 
+on behalf of the yt development team

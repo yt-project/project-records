@@ -1,0 +1,39 @@
+Hi all,
+
+We're proud to release yt version 2.5.4.  This is a scheduled point
+release that includes all bug fixes identified and fixed since the
+release of 2.5.3 on June 3.
+
+Additions, changes and bug fixes include:
+
+  * Considerably (10x+) faster kD-tree building for volume rendering
+  * System build fix for POSIX systems
+  * Fixing domain offsets for halo centers-of-mass
+  * Removing some Enzo-specific terminology in the Halo Mass Function
+  * Addition of coordinate vectors on volume render
+  * Updating RADMC3D export code to support FLASH
+  * Pickling fix for extracted regions
+  * Addition of some tracer particle annotation functions
+  * Better error message for "yt" command
+  * Fix for radial vs poloidal fields
+  * Piernik 2D data handling fix
+  * Fixes for FLASH current redshift
+
+If you are using the stable branch of yt from an installation script,
+you can upgrade using "yt update" or "yt update --all" to upgrade your
+full dependency stack.  If you are using the development branch, you
+may already have these fixes.  A tarball of this release has been
+uploaded to the Python Package Index (PyPI).  While originally a 2.5.4
+release was not planned, developments for 2.6 have been delayed.  The
+next scheduled release will be on August 1, and will be version 2.6.
+We are hoping to include a unification of the Boxlib frontends,
+compatibility with Python 3 (and embedding inside Blender) and other
+usual improvements to the yt codebase.
+
+Documentation for this release can be found at:
+
+http://yt-project.org/docs/dev/
+
+Thanks very much,
+
+Matt, on behalf of the yt development team

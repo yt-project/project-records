@@ -1,0 +1,57 @@
+Hi all,
+
+We're proud to release yt version 2.5.3.  This is a scheduled point
+release that includes all bug fixes identified and fixed since the
+release of 2.5.2 on May 1.
+
+Additions, changes and bug fixes include:
+
+  * yt can now export to RADMC3D
+  * Athena frontend now supports Static Mesh Refinement and units (
+http://hub.yt-project.org/nb/7l1zua )
+  * PlotWindows now have a set_font function and a new default font setting
+  * Colorbars less likely to extend off the edge of a PlotWindow
+  * Clumps overplotted on PlotWindows are now correctly contoured
+  * Allsky projections and HEALpix camera now correctly use four channels (RGBA)
+  * Many fixes to light ray and profiles for integrated cosmological analysis
+  * Improvements to OpenMP compilation
+  * Typo in value for km_per_pc (not used elsewhere in the code base)
+has been fixed
+  * Enable parallel IPython notebook sessions (
+http://hub.yt-project.org/nb/qgn19h )
+  * Change (~1e-6) to particle_density deposition, enabling it to be
+used by FLASH and other frontends
+  * Addition of is_root function for convenience in parallel analysis sessions
+  * Additions to Orion particle reader
+  * Fix long-standing bug for plotting arrays with range of zero
+  * Fixing TotalMass for case when particles not present
+  * Fixing the density threshold or HOP and pHOP to match the merger tree
+  * Reason can now plot with latest plot window
+  * Adding option to have interpolation based on non-uniform bins in
+interpolator code
+  * Issues with VelocityMagnitude and aliases with velo have been
+corrected in the FLASH frontend
+  * Halo radii are calculated correctly for domains that do not start at 0,0,0.
+  * Halo mass function now works for non-Enzo frontends.
+  * Bug fixes for directory creation, typos in docstrings
+
+If you are using the stable branch of yt from an installation script,
+you can upgrade using "yt update" or "yt update --all" to upgrade your
+full dependency stack.  If you are using the development branch, you
+may already have these fixes.  A tarball of this release has been
+uploaded to the Python Package Index (PyPI).
+
+This release includes a total of over 150 changesets, contributed over
+the course of nearly 40 pull requests by over a dozen individuals.
+The next scheduled release will be on July 1, and will be version 2.6.
+ We are hoping to include a unification of the Boxlib frontends,
+compatibility with Python 3 (and embedding inside Blender) and other
+usual improvements to the yt codebase.
+
+Documentation for this release can be found at:
+
+http://yt-project.org/docs/dev/
+
+Thanks very much,
+
+Matt, on behalf of the yt development team

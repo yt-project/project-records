@@ -1,0 +1,31 @@
+Hi all,
+
+I've just tagged a "yt-1.6.1" release.  This is primarily a very minor
+bug fix release. If you have an installation of yt-1.6 from the
+installation script, you should be able to "svn up" and "python2.6
+setup.py develop" in the src/yt-1.6 directory to update your version.
+
+The new command "yt instinfo" can provide information about the
+currently installed yt version, and in some cases may be able to
+automatically update your source with the "-u" option.  This should
+allow for self-healing installations, as well as more rapid turnaround
+of bug fixes.
+
+This release includes the following items:
+
+Bug fixes:
+
+ * Critical fixes to ParticleIO
+ * Halo mass function fixes for comoving coordinates
+ * Fixes to halo finding
+ * Fixes to the installation script
+
+Improvements:
+
+ * "yt instinfo" command to report current installation information as well as
+  auto-update some types of installations
+ * Optimizations to the volume renderer (2x-26x reported speedups)
+
+Best wishes,
+
+Matt

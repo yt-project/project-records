@@ -1,0 +1,129 @@
+
+The yt community is proud to announce the release of yt 3.3!
+
+yt (http://yt-project.org) is an open source, community developed toolkit for the analysis and visualization of volumetric data of all types, with a particular emphasis on astrophysical and nuclear engineering simulations.
+
+Since the yt 3.2 release, over 500 pull requests have been merged from 41 contributors, representing over 20% of the total pull requests merged to date. Major new features in this release include:
+
+* Raw and processed data from selections, projections, profiles and so forth can now be saved in a ytdata format and loaded back in by yt. See http://yt-project.org/docs/dev/analyzing/saving_data.html for more information.
+* Totally re-worked volume rendering API. The old API is still available for users who prefer it, however. See http://yt-project.org/docs/dev/quickstart/volume_rendering.html.
+* Support for unstructured mesh visualization. See http://yt-project.org/docs/dev/visualizing/plots.html?highlight=unstructured%20mesh%20slices and http://yt-project.org/docs/dev/visualizing/unstructured_mesh_rendering.html for more information.
+* Interactive Data Visualization for AMR and unstructured mesh datasets. See http://yt-project.org/docs/3.3.1/visualizing/interactive_data_visualization.html.
+* Several new colormaps, including a new default, 'arbre'. The other new colormaps are named 'octarine', 'kelp', and 'dusk'. All these new colormaps were generated using the viscm package (https://github.com/matplotlib/viscm) and should do a better job of representing the data for colorblind viewers and when printed out in grayscale. See http://yt-project.org/docs/dev/visualizing/colormaps/index.html for more detail.
+* New frontends for the Exodus II (http://yt-project.org/docs/dev/examining/loading_data.html#exodus-ii-data), GAMER (http://yt-project.org/docs/dev/examining/loading_data.html#gamer-data), and Gizmo (http://yt-project.org/docs/dev/examining/loading_data.html#gizmo-data) data formats.
+* The unit system associated with a dataset is now customizable, defaulting to CGS. See http://yt-project.org/docs/dev/analyzing/units/unit_systems.html.
+* Enhancements and usability improvements for analysis modules, especially the absorption_spectrum, photon_simulator, and light_ray modules. See http://yt-project.org/docs/dev/analyzing/analysis_modules/synthetic_observation.html.
+* Data objects can now be created via an alternative Numpy-like API. See http://yt-project.org/docs/dev/analyzing/objects.html?highlight=quickly%20selecting%20data#quickly-processing-data.
+* A line integral convolution plot modification. See http://yt-project.org/docs/dev/visualizing/callbacks.html?highlight=line%20integral%20convolution#overplot-line-integral-convolution.
+* Many speed optimizations, including to the volume rendering, units, tests, covering grids, the absorption spectrum and photon simulator analysis modules, and ghost zone generation.
+* Packaging and release-related improvements: better install and setup scripts, automated PR backporting.
+* Readability improvements to the codebase, including linting, removing dead code, and refactoring much of the Cython.
+* Improvements to the CI infrastructure, including more extensible answer tests and automated testing for Python 3 and Windows.
+* Numerous documentation improvements, including formatting tweaks, bugfixes, and many new cookbook recipes.
+* Support for geographic (lat/lon) coordinates.
+* Several improvements for SPH codes, including alternative smoothing kernels, an add_smoothed_particle_field function, and particle type-aware octree construction for Gadget data.
+* Roundtrip conversions between Pint and yt units.
+* Added halo data containers for gadget_fof frontend.
+* Enabled support for spherical datasets in the BoxLib frontend.
+* Many new tests have been added.
+* Better hashing for Selector objects.
+
+For a more complete list of the changes in this release, see http://yt-project.org/docs/dev/reference/changelog.html.
+
+Standard Installation Methods
+----------------------------------------
+
+As with previous releases, you can install yt using one of the following methods.
+
+1. From the install script on OSX and Linux (http://yt-project.org/#getyt):
+
+As of this release, the install script has been updated to use conda by default (see below). If you would like to retain the old behavior of installing everything from source, you can edit the INST_CONDA flag in the script manually.
+
+# Installation
+
+$ wget http://bitbucket.org/yt_analysis/yt/raw/stable/doc/install_script.sh
+$ bash install_script.sh
+
+At the end of the installation process, the script will print a note about how to update your PATH environment variable to activate your yt installation. As of yt 3.3, you no longer need to use the “activate” script.
+
+# Update
+
+$ yt update
+
+Note also that many of the dependencies have been updated since version 3.2.  If you previously installed yt from the install script, it is advised that you re-install yt from scratch.
+
+2. From pip (source or binary wheel, see below for more details):
+
+# Installation
+
+$ pip install yt
+
+# Update
+
+$ pip install -U yt
+
+3. From the Anaconda Python Distribution (https://store.continuum.io/cshop/anaconda/). Because it may take several weeks for the yt package on the official conda channel to be updated, we recommend using the conda-forge instead:
+
+# Installation
+
+$ conda install  -c conda-forge yt
+
+# Update
+
+$ conda update yt -c conda-forge yt
+
+If you are on the “stable” branch, updating will bring you from yt 3.2 to 3.3, incorporating all
+changes since 3.2, whereas if you are on the “dev” or “yt” branch, only the changes since
+your last update should be incorporated.
+
+Installing Binary Packages via pip
+---------------------------------------------
+
+You can also install binary packages (“wheels”) using pip on Windows (64-bit only), Mac OS X, and Linux (32 and 64-bit). This has the advantage of not needing to install yt from source using a proper compiler setup, which has caused occasional problems on both of these platforms in the past.
+
+Binary wheels are available on the following platforms and python installations (using either Python 2.7 or 3.4):
+
+Linux x86_64:
+
+Python.org Python
+
+Windows x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+WinPython (http://winpython.sourceforge.net/)
+
+Mac OS X x86_64:
+
+Enthought Canopy Python (https://www.enthought.com/products/canopy/)
+Homebrew Python (http://brew.sh/)
+Python.org Python
+Mac OS X’s system Python
+MacPorts Python (https://www.macports.org/)
+
+The requirements for installing yt via this method are the same as from source:
+
+NumPy
+h5py
+HDF5
+SymPy
+Matplotlib
+IPython (not required, but strongly recommended)
+
+To install a new version of yt on one of these platforms, simply do
+
+$ pip install yt
+
+and you should get the binary distribution automatically. Also, if your python installation is system-wide (e.g., the Mac system Python) you might either need to run pip with administrator privileges or install to your home directory:
+
+$ pip install --user --prefix= yt
+
+Ensure that the $HOME/.local/bin directory is in your PATH if you choose this method.
+
+For more information, including more installation instructions, links to community resources, and information on contributing to yt’s development, please see the yt homepage at http://yt-project.org and the documentation for yt-3.3 at http://yt-project.org/docs/3.3.1.
+
+yt is the product of a large community of developers and users and we are extraordinarily grateful for and proud of their contributions. Please forward this announcement on to any interested parties.
+
+As always, if you have any questions, concerns, or run into any trouble updating please don't hesitate to send a message to the mailing list or stop by our IRC channel.
+
+Best,
+The yt development team

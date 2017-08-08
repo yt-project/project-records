@@ -1,0 +1,97 @@
+Hi all,
+
+We are pleased to announce the release of yt 2.6.  This is a major
+release that includes new features and major updates along with all the
+bugs identified and fixed since the release of 2.5.5 on August 28.  We
+currently plan for this to be the final major release of the yt 2.X
+release series, although bug fix releases will continue for the
+foreseeable future.
+
+Please forward this email to other interested parties.
+
+Most notable changes include:
+
+ * Relicensing whole project to BSD 3-clause
+ * Automated absorption line fitting module developed by Hilary Egan
+ * Significant improvement in documentation in a joint effort of the dev
+team led by Cameron Hummels
+ * Documentation now includes inlined IPython notebooks, thanks to
+Nathan Goldbaum
+ * RAMSES, ART, Tiger, Maestro and Castro frontends removal as their
+counterparts in 3.0 branch exceeded them both performance and capability
+wise.  All users of the aforementioned codes are strongly advised to
+migrate to yt-3.0
+ * Python stack update, which now features: ipython-1.1.0, hg-2.8,
+python-2.7.6 numpy-1.7.1
+ * New ProfilePlot and PhasePlot classes thanks to Britton Smith, Nathan
+Goldbaum and Matt Turk. Previous mechanisms (i.e. profiles using
+PlotCollection) are deprecated and will be removed in future versions.
+ * Projections of the Sunyaev-Zeldovich effect using SZpack implemented
+by John ZuHone
+ * Generating Mock X-ray Photons now possible thanks to John ZuHone
+ * Introduction of Transfer Function Helper by Sam Skillman
+ * Initial support for installing yt with the package management system
+Conda.
+ * The addition of a frontend for the Pluto code by Andrew Myers
+ * The addition of an OBJ exporter to enable transparent and
+multi-surface exports of surfaces to Blender and Sketchfab by Jiill Naiman
+ * yt can now export to RADMC3D thanks to Andrew Myers
+ * Considerably (10x+) faster kD-tree building for volume rendering
+thanks to Sam Skillman
+ * Full integration and demonstration of all available colormaps
+included in documentation thanks to Cameron Hummels
+
+There have also been a number of minor bugs fixed in this release.  Some
+highlights:
+
+ * Center of the plot in off_axis_projection plots is now calculated
+correctly, thanks to William Gray
+ * Several enhancements to PlotWindow made by Nathan Goldbaum:
+   - Save accepts paths to directories
+   - Better handling of highly rectangular domains
+   - Axes and colorbars are now toggleable
+   - Nicer output in ipython notebook
+   - eps_writer is now compatible with PlotWindow, thanks to John Wise
+ * yt command line enhancements thanks to Devin Silvia and Matt Turk
+ * Several enhancements to Athena frontend by John ZuHone
+ * Improvements for OSX support (up to Mavericks)
+ * Updates to halo finding routines by Britton Smith
+
+We’d also like to recognize the new contributors to the yt 2.x source
+code and documentation during the yt 2.5 development cycle:
+
+ * Hilary Egan
+ * John Forbes
+ * William Gray
+ * Stuart Mumford
+ * Jill Naiman
+ * Doug Rudd
+ * Noel Scudder
+ * Elizabeth Tasker
+
+If you are using the stable branch of yt from an installation script,
+you can upgrade using "yt update" or "yt update --all" to upgrade your
+full dependency stack.  If you are using the development branch, you
+may already have these fixes.  A tarball of this release has been
+uploaded to the Python Package Index (PyPI).
+
+Documentation for this release is available at:
+
+http://yt-project.org/docs/2.6/
+
+Previous announcements from the 2.5 release cycle can be found at:
+
+2.5.5:
+http://lists.spacepope.org/pipermail/yt-users-spacepope.org/2013-August/003929.html
+2.5.4:
+http://lists.spacepope.org/pipermail/yt-users-spacepope.org/2013-July/003716.html
+2.5.3:
+http://lists.spacepope.org/pipermail/yt-users-spacepope.org/2013-June/003669.html
+2.5.2:
+http://lists.spacepope.org/pipermail/yt-users-spacepope.org/2013-May/003595.html
+2.5.1:
+http://lists.spacepope.org/pipermail/yt-dev-spacepope.org/2013-March/002988.html
+
+Thank you very much,
+
+Kacper, on behalf of the yt development team

@@ -1,0 +1,47 @@
+Hi all,
+
+We're proud to release yt version 2.5.5.  This is an unscheduled point
+release that includes all bug fixes identified and fixed since the
+release of 2.5.4 on July 2nd.  We missed our scheduled release date a
+bit, and have continued to push off a 2.6 as development on the 2.x
+branch winds down.
+
+Additions, changes and bug fixes include:
+
+ * New absorption spectrum analysis module with documentation
+ * Fix for volume rendering on the command line
+ * map_to_colormap will no longer return out-of-bounds errors
+ * Fixes for dds in covering grid calculations
+ * Library searching for build process is now more reliable
+ * Unit fix for "VorticityGrowthTimescale" field
+ * Pyflakes stylistic fixes
+ * Adding ability to draw lines with Grey Opacity in volume rendering
+ * Updated physical constants to reflect 2010 CODATA data
+ * Number density added to FLASH
+ * Dependency updates (including IPython 1.0)
+ * Many fixes for Athena frontend
+ * Radius and ParticleRadius now work for reduced-dimensionality datasets
+ * Source distributions now work again!
+ * Better notebook support for yt plots
+ * Athena data now 64 bits everywhere
+ * Grids displays on plots are now shaded to reflect the level of refinement
+ * show_colormaps() is a new function for displaying all known colormaps
+ * PhasePlotter by default now adds a colormap.
+
+If you are using the stable branch of yt from an installation script,
+you can upgrade using "yt update" or "yt update --all" to upgrade your
+full dependency stack.  If you are using the development branch, you
+may already have these fixes.  A tarball of this release has been
+uploaded to the Python Package Index (PyPI).
+
+yt releases often feature contributions from many individuals; this
+release includes first time contributions from John Forbes, Noel
+Scudder and Hilary Egan.
+
+Documentation for this release can be found at:
+
+http://yt-project.org/docs/dev/
+
+Thanks very much,
+
+Matt, on behalf of the yt development team

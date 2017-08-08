@@ -1,0 +1,31 @@
+Hi all,
+
+We're proud to release yt version 2.5.1.  This is a scheduled point
+release that includes all bug fixes identified and fixed since the
+release of 2.5 on March 1.
+
+Major changes include:
+
+  * The addition of a frontend for the Pluto code (Andrew Myers)
+  * The addition of an OBJ exporter to enable transparent and
+multi-surface exports of surfaces to Blender and Sketchfab (Jill
+Naiman)
+
+There have also been a number of minor bugs fixed in this release.
+Some highlights:
+
+  * load_uniform_grid can now decompose dims >= 1024.  (#537)
+  * Axis unit setting works correctly for unit names  (#534)
+  * ThermalEnergy is now calculated correctly for Enzo MHD simulations (#535)
+  * Radius fields had an asymmetry in periodicity calculation (#531)
+  * Boolean regions can now be pickled (#517)
+
+If you are using the stable branch of yt from an installation script,
+you can upgrade using "yt update".  If you are using the development
+branch, you may already have these fixes.  An installation-ready
+tarball with generated C code (i.e., no Cython) has been uploaded to
+the Python Package Index (PyPI).
+
+Thanks very much,
+
+Matt, on behalf of the yt development team

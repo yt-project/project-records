@@ -1,0 +1,25 @@
+Hi all,
+
+We've just released yt 3.0.2.  This is a regularly scheduled bugfix release that includes all of the fixes that have been submitted as pull requests in the past month.
+
+See this page for a full listing of merged pull requests: https://bitbucket.org/yt_analysis/yt/pull-requests?displaystatus=merged
+
+We urge all users to update as soon as is convenient.  If you built yt using the install script, you can update with the following shell command:
+
+$ yt update
+
+If you installed using pip, you can do:
+
+$ pip install -U yt
+
+Finally, if you installed using conda, you can do:
+
+$ conda update yt
+
+Note that it might take a day or two for the conda package to be updated.
+
+As always, if you have any questions, concerns, or run into any trouble updating please don't hesitate to send a message to the mailing list or stop by our IRC channel.
+
+Hope you all have a relaxing weekend,
+
+Nathan Goldbaum
