@@ -1,4 +1,4 @@
-# Advisory Board Meeting Notest
+# Advisory Board Meeting Notes
 
 These are notes from the meetings of the yt advisory board, as assembled in
 support of
