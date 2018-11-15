@@ -1,0 +1,91 @@
+The yt community is proud to announce the release of yt 3.5.0. This is a major release and includes a number of new features, minor improvements, and bugfixes.
+
+yt (http://yt-project.org) is an open source, community developed toolkit for the analysis and visualization of volumetric data.
+
+If you are interested in contributing to yt, please see our repository on GitHub at http://github.com/yt-project/yt.
+
+Since yt 3.4.0 we have merged 328 pull requests from 41 contributors, including 23 new contributors. We would like to thank the following people who made code contributions to this release, new contributors are marked with an asterisk.
+
+Ashley Kelly *
+Fabian Koller
+Enrico Garaldi *
+Hugo Pfister *
+Josh Borrow *
+Kiran Eiden *
+Matthew Turk
+Prateek Gupta *
+Ricarda Beckmann
+Kacper Kowalik
+Andrew Myers
+Brandon Qiao *
+Britton Smith
+Christoph Behrens *
+Cameron Hummels
+Claire Kopenhafer *
+Clayton Strawn *
+Corentin Cadiou
+David Pérez-Suárez *
+Donald E Willcox *
+Hilary Egan
+Abhishek Singh *
+Hsi-Yu Scive
+Suoqing Ji
+Josh Soref *
+John ZuHone
+Max Gronke *
+Max Katz
+Miguel de Val-Borro
+Marianne Corvellec *
+Madicken Munk *
+Clément Robert *
+Nick Gnedin *
+Nathan Goldbaum
+Philip Grete *
+Bili Dong
+Sean Larkin *
+Stephanie Ho *
+Yi-Hao Chen
+Ying-Chao Lu *
+Mike Zingale
+
+We would also like to thank everyone who has contributed in other ways, including by reporting issues, participating on the mailing list, and evangelizing yt to your colleagues.
+
+Additionally, we would like to highlight the contributions of Ashley Kelly and Abhishek Singh, who contributed to this release in the context of Google Summery of Code projects. Both students passed their evaluations and made substantial improvements to yt. You can find out more about Ashley and Abhishek's projects on the Summer of Code website:
+
+https://summerofcode.withgoogle.com/projects/#5101882905722880
+
+https://summerofcode.withgoogle.com/projects/#5325639024902144
+
+Finally, we would also like to highlight the contributions of Corentin Cadiou, who has made substantial performance and functionality improvements to the RAMSES frontend as part of this release. Corentin's contributions came in on a volunteer basis and we thank him for his tireless efforts to improve yt's support for RAMSES data.
+
+Binaries for yt 3.5.0 are available via pip and conda. If you installed via the install script or use conda to manage your python installation, you can update yt via:
+
+$ conda update -c conda-forge yt
+
+Conda-forge package updates may not be up quite yet but should be uploaded by the end of the day.
+
+And if you manage your python installation with pip:
+
+$ pip install -U yt
+
+As always, if you have any questions, concerns, or run into any trouble updating please don’t hesitate to send a message to the mailing list or stop by our Slack or IRC channel.
+
+yt is the product of a large community of developers and users and we are extraordinarily grateful for and proud of their contributions. Please forward this announcement on to any interested parties.
+
+Best,
+
+The yt development team
+
+
+What's new?
+-----------
+
+Please see the release notes for full details (http://yt-project.org/docs/3.5.0/reference/changelog.html#version-3-5-0), but we highlight a few major changes and improvements here.
+
+
+* yt.analysis_modules has been deprecated in favor of the new yt_astro_analysis package. New features and new astronomy-specific analysis modules will go into yt_astro_analysis and importing from yt.analysis_modules will raise a noisy warning. We will remove yt.analysis_modules in a future release
+* Vector fields and derived fields depending on vector fields have been systematically updated to account for a bulk correction field parameter. For example, for the velocity field, all derived fields that depend on velocity will now account for the "bulk_velocity" field parameter. In addition, we have defined "relative_velocity" and "relative_magnetic_field" fields that include the bulk correction. Both of these are vector fields, to access the components, use e.g. "relative_velocity_x". The "particle_position_relative" and "particle_velocity_relative" fields have been deprecated.
+* The RAMSES frontend has seen considerable improvements, with support for the new RAMSES self-describing particle output format, considerable speed improvements for I/O and initially loading data, and support for restricting the domain to a subset of the full simulation volume for imrpoved speed and reduced memory usage for large datasets.
+* Aliases to spatial fields with the "gas" field type will now be returned in the default unit system for the dataset. As an example the "x" field might resolve to the field tuples ("index", "x") or ("gas", "x"). Accessing the former will return data in code units while the latter will return data in whatever unit system the dataset is configured to use (CGS, by default). This means that to ensure the units of a spatial field will always be consistent, one must access the field as a tuple, explicitly specifying the field type. Accessing a spatial field using a string field name may return data in either code units or the dataset’s default unit system depending on the history of field accesses prior to accessing that field. In the future accessing fields using an ambiguous field name will raise an error.
+* The max_level and min_level attributes of yt data objects now correctly update the state of the underlying data objects when set. In addition we have added an example to the cookbook that shows how to downsample AMR data using this functionality.
+* It is now possible to customize the formatting of labels for ion species fields. Rather than using the default spectroscopic notation, one can call ds.set_field_label_format("ionization_label", "plus_minus") to use the more traditional notation where ionization state is indicated with + and - symbols.
