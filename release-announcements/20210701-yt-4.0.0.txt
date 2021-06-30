@@ -20,13 +20,13 @@ This release has been years in the making, and features contributions from dozen
 
 At the end of this email you can find a list of individuals who have contributed to this release; those who have made their first contribution are listed with an asterisk.
 
-Binaries for yt 4.0 are available via pip and conda. If you use conda to manage your python installation, you can update yt via:
+Binaries for yt 4.0 are available via pip and conda. If you use conda to manage your Python installation, you can update yt via:
 
 $ conda update -c conda-forge yt
 
 Conda-forge package updates may not be up quite yet but should be uploaded by the end of the day.
 
-If you manage your python installation with pip, you can update yt via:
+If you manage your Python installation with pip, you can update yt via:
 
 $ python -m pip install -U yt
 
