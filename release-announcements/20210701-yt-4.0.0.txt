@@ -28,7 +28,7 @@ Conda-forge package updates may not be up quite yet but should be uploaded by th
 
 If you manage your python installation with pip, you can update yt via:
 
-$ pip install -U yt
+$ python -m pip install -U yt
 
 For more information, including installation instructions, links to community
 resources, and information on contributing to yt’s development, please see the
