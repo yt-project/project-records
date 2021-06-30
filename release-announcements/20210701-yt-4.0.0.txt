@@ -32,6 +32,8 @@ $ python -m pip install -U yt
 
 For more information, including installation instructions, links to community resources, and information on contributing to yt’s development, please see the yt homepage at https://yt-project.org and the documentation for yt-4.0 at http://yt-project.org/docs/4.0.0
 
+We especially thank Nathan Goldbaum for his many years of work and contributions to this release and to the yt community.
+
 yt is the product of a large community of developers and users and we are extraordinarily grateful for and proud of their contributions. Please forward this announcement on to any interested parties.
 
 Thank you,
