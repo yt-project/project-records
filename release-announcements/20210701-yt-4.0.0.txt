@@ -4,7 +4,8 @@ yt (http://yt-project.org) is an open source, community-developed toolkit for an
 
 If you are interested in contributing to yt, please see our repository on GitHub at http://github.com/yt-project/yt
 
-This release features a complete reworking of a number of internal components, particularly those related to particles and discrete points.
+This release features a complete reworking of a number of internal components,
+most importantly those related to particles and discrete points.
 
 Information about "what's new" can be found at: https://yt-project.org/docs/4.0.0/yt4differences.html .
 
@@ -42,40 +43,40 @@ The yt team
 
 Contributors to this release:
 
- * Ashley Kelly
- * Axel Huebl
- * Baptiste Mouginot
- * Ben Kimock
- * Bili Dong
- * Brandon Qiao
- * Britton Smith
- * Cameron Hummels
- * Camille Avestruz
- * Chris Havlin
- * Christopher W. Evans
- * Clayton Strawn
- * Clément Robert
- * Corentin Cadiou
- * David Grote
- * Desika Narayanan
- * Jared Coughlin
- * Jody Klymak
- * John Regan
- * John ZuHone
- * Kacper Kowalik
- * Kelton Halbert
- * Madicken Munk
- * Matthew Abruzzo
- * Matthew Turk
- * Matthias Bussonnier
- * Meagan Lang 
- * Michael Zingale
- * Miguel de Val-Borro
- * Nathan Goldbaum
- * Neïl Zaim
- * Niels Claes
- * Ole Streicher
- * Philipp Edelmann
- * Revathi Jambunathan
- * Shea Garrison-Kimmel
- * Stefan Arridge
+Ashley Kelly
+Axel Huebl *
+Baptiste Mouginot *
+Ben Kimock *
+Bili Dong
+Brandon Qiao
+Britton Smith
+Cameron Hummels
+Camille Avestruz *
+Chris Havlin *
+Christopher W. Evans *
+Clayton Strawn
+Clément Robert
+Corentin Cadiou
+David Grote *
+Desika Narayanan *
+Jared Coughlin *
+Jody Klymak *
+John Regan
+John ZuHone
+Kacper Kowalik
+Kelton Halbert *
+Madicken Munk
+Matthew Abruzzo *
+Matthew Turk
+Matthias Bussonnier *
+Meagan Lang *
+Michael Zingale
+Miguel de Val-Borro
+Nathan Goldbaum
+Neïl Zaim *
+Niels Claes
+Ole Streicher *
+Philipp Edelmann *
+Revathi Jambunathan *
+Shea Garrison-Kimmel *
+Stefan Arridge *
