@@ -41,7 +41,7 @@ Thank you,
 
 The yt team
 
-Contributors to this release:
+Contributors to this release (first time contributors are marked with "*")
 
 Ashley Kelly
 Axel Huebl *
