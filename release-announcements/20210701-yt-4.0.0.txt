@@ -2,12 +2,7 @@ The yt community is proud to announce the release of yt-4.0!
 
 yt (http://yt-project.org) is an open source, community-developed toolkit for analysis and visualization of volumetric data.
 
-If you are interested in contributing to yt, please see our repository on GitHub at http://github.com/yt-project/yt
-
-This release features a complete reworking of a number of internal components,
-most importantly those related to particles and discrete points.
-
-Information about "what's new" can be found at: https://yt-project.org/docs/4.0.0/yt4differences.html .
+This release features a complete reworking of a number of internal components, most importantly those related to particles and discrete points.  In keeping with this, we expect that some scripts used for analysis will require modifications; information about "what's new" as well as instructions for how to update analysis scripts can be found at: https://yt-project.org/docs/4.0.0/yt4differences.html .
 
 A set of highlights of the pull requests that went into this release can be found here:
 
@@ -17,7 +12,7 @@ A full listing of the pull requests that went into this release can be found her
 
 https://gist.github.com/matthewturk/7a1f21d98aa5188de7645eda082ce4e6#file-yt4-changelog-md
 
-This release has been years in the making, and features contributions from dozens of individuals, many of whom were new to the project.  It marks the culmination of a set of wide-reaching infrastructure changes that result in much higher fidelity to the underlying data for particle datasets, and we anticipate that improvements to the overall project and project infruastructure will lead directly to a much more rapid release cycle of enhancements and bug fixes in the future.
+This release has been years in the making, and features contributions from dozens of individuals, many of whom were new to the project.  It marks the culmination of a set of wide-reaching infrastructure changes that result in much higher fidelity to the underlying data for particle datasets.
 
 At the end of this email you can find a non-exhaustive list of individuals who have contributed to this release; many of them made their first contribution during this release!
 
@@ -34,7 +29,8 @@ For more information, including installation instructions, links to community re
 
 We especially thank Nathan Goldbaum for his many years of work and contributions to this release and to the yt community.
 
-yt is the product of a large community of developers and users and we are extraordinarily grateful for and proud of their contributions. Please forward this announcement on to any interested parties.
+yt is the product of a large community of developers and users and we are extraordinarily grateful for and proud of their contributions. Please forward this announcement on to any interested parties.  If you are interested in contributing to yt, please see our repository on GitHub at http://github.com/yt-project/yt
+
 
 Thank you,
 
