@@ -25,7 +25,6 @@ Binaries for yt 4.0 are available via pip and conda. If you use conda to manage 
 
 $ conda update -c conda-forge yt
 
-Conda-forge package updates may not be up quite yet but should be uploaded by the end of the day.
 
 If you manage your Python installation with pip, you can update yt via:
 
